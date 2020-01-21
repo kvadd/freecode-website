@@ -1,0 +1,17 @@
+<div class="header">
+
+    <img [routerLink]="['/']" class="logo" src="assets/freecode_logo.webp">
+
+    <div class="header-right">
+        <div class="menu-button" (click)="toggleMenu($event)">&#9776;</div>
+
+        <div *ngIf="showMenu" class="menu" [@slideIn]>
+            <div class="menu-item" [routerLink]="['/']" [routerLinkActive]="'active'"><a><i class="fa fa-home" aria-hidden="true"></i> Hem</a></div>
+            <div class="menu-item"><a [routerLink]="['/uppdrag']" [routerLinkActive]="'active'"><i class="fa fa-address-card" aria-hidden="true"></i> Jag letar uppdrag</a></div>
+            <div class="menu-item"><a [routerLink]="['/history']" [routerLinkActive]="'active'"><i class="fa fa-users" aria-hidden="true"></i> Jag vill köpa konsulter</a></div>
+            <div class="menu-item"><a [routerLink]="['/history']" [routerLinkActive]="'active'"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Hur funkar det som anställd?</a></div>
+            <div class="menu-item"><a [routerLink]="['/history']" [routerLinkActive]="'active'"><i class="fa fa-envelope" aria-hidden="true"></i> Kontakt</a></div>
+        </div>
+
+    </div>
+</div>

@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+@import url(https://fonts.googleapis.com/css?family=Wire+One|Raleway:300);
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+
+
+    // overflow: hidden;
+    // width: 100%;
+    // height: 100%;
+    margin: 0;
+    // padding: 0;
+    // background-color: var(--color-white);
+    // font-family: "Roboto", helvetica, arial, sans-serif;
+    // font-size: 16px;
+    // font-weight: 400;
+    // text-rendering: optimizeLegibility;
+    // // color: $white;
+
+    // display: flex;
+    // flex-direction: column;
+    // height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+}
+

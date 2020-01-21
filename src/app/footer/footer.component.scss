@@ -1,0 +1,42 @@
+footer {
+    margin: 0;
+}
+
+.footer {
+  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+}
+
+.colour-block {
+    background: linear-gradient(0deg, #63267d, #823a9c);
+    padding: 10px 20% 40px 20%;
+    color: #fff;
+    text-align: center;
+}
+  
+h5 {
+    text-align: center;
+    font-size: 40px;
+    font-family: "wire one", serif;
+    font-weight: normal;
+    margin: 0 auto;
+}
+
+p {
+  font-size: 16px;
+  font-family: "Raleway", serif;
+  margin: 0;
+}
+
+.separator-default {
+    margin-bottom: -5px;
+}
+
+.logo {
+    margin: 0 auto;
+    height: 24px;
+}
+
+.biolit {
+    font-size: 14px;
+    font-style: italic;
+}

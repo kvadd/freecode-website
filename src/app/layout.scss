@@ -1,0 +1,80 @@
+.white-block {
+  background: #fff;
+  padding: 0 20% 100px 20%;
+  color: #823a9c;
+}
+
+.colour-block {
+  background: linear-gradient(0deg, #63267d, #823a9c);
+  padding: 100px 20%;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 80px;
+  font-family: "wire one", serif;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+h5 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "wire one", serif;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+p {
+  font-size: 20px;
+  font-family: "Raleway", serif;
+}
+
+.separator {
+  overflow: hidden;
+  width: 100%;
+}
+
+.separator-canvas {
+  margin-top: -203px;
+  position: absolute;
+}
+
+.separator-top {
+    margin-top: -200px;
+    position: absolute;
+}
+
+.separator-default {
+  margin-bottom: -5px;
+}
+
+.top {
+    height: 450px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#63267d), to(#823a9c));
+    background: linear-gradient(180deg, #63267d, #823a9c);
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    padding-top: 170px;
+    font-family: "Raleway", serif;
+}
+
+button {
+    border: none;
+    // background: linear-gradient(0deg, #63267d, #823a9c);
+    background: #a852c7;
+    box-shadow: 0px 2px 20px 0px #a852c78f;
+    border-radius: 6px;
+    font-weight: 600;
+    color: white;
+    padding: 20px;
+    transition: 0.5s all ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #9a4fb5;
+    box-shadow: 0px 15px 30px 0px #a852c78f;
+}
