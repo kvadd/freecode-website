@@ -7,12 +7,18 @@ import { IntroComponent } from './intro/intro.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { UppdragComponent } from './uppdrag/uppdrag.component';
+import { KontaktComponent } from './kontakt/kontakt.component';
+import { KonsulterComponent } from './konsulter/konsulter.component';
+import { FrikodareComponent } from './frikodare/frikodare.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroComponent,
     UppdragComponent,
+    KonsulterComponent,
+    FrikodareComponent,
+    KontaktComponent,
     HeaderComponent,
     FooterComponent
   ],

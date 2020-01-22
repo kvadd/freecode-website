@@ -1,0 +1,30 @@
+ul {
+    font-family: "Raleway", serif;
+    font-size: 20px;
+}
+
+.buttons-container {
+    justify-content: center;
+}
+
+.white-block {
+    text-align: center;
+}
+
+.benefit-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefit-item {
+    margin: 1rem;
+}
+
+.frikodare-block {
+    margin-top: 2rem;
+}
+
+h5 {
+    border-bottom: 3px solid #823a9c;
+    border-radius: 2px;
+}

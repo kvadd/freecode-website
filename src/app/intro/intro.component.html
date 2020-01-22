@@ -9,11 +9,13 @@
 
 <div class="white-block">
     <h1>Konsulter i världsklass</h1>
-    <p>Hej! FreeCode är ett konsultbolag och konsultmäklare i Stockholm. Våra anställda konsulter är JavaScript-specialister och vi hjälper att tillsätta alla roller inom tech. Behöver du en .NET utvecklare eller en agil coach? Det är bara att höra av dig. Vad för dig hit idag?</p>
+    <p>Hej! FreeCode är ett konsultbolag och konsultmäklare i Stockholm. Våra anställda konsulter är JavaScript-specialister och vi hjälper att tillsätta alla roller inom tech. Behöver du en .NET utvecklare eller en agil coach? Det är bara att höra av dig.</p>
+
+    <h5>Vad för dig hit idag?</h5>
     <div class="buttons-container">
-        <button style="margin-right: 1rem;">Jag letar uppdrag</button>
-        <button>Jag vill köpa konsulter</button>
-        <button style="margin-left: 1rem;">Hur funkar det som anställd?</button>
+        <button [routerLink]="['/uppdrag']" style="margin-right: 1rem;">Jag letar uppdrag</button>
+        <button [routerLink]="['/konsulter']">Jag har konsultbehov</button>
+        <button [routerLink]="['/frikodare']" style="margin-left: 1rem;">Hur funkar det som anställd?</button>
     </div>
 </div>
 

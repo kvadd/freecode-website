@@ -1,0 +1,26 @@
+ul {
+    font-family: "Raleway", serif;
+    font-size: 20px;
+}
+
+.buttons-container {
+    justify-content: center;
+}
+
+.white-block {
+    text-align: center;
+}
+
+.white-block a {
+    color: #823a9c;
+    text-decoration: none;
+}
+
+.competence-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.competence-item {
+    text-align: left;
+}

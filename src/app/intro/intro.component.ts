@@ -27,6 +27,7 @@ export class IntroComponent implements OnInit {
         this.canvas = document.getElementById('renderCanvas');
         this.engine = new Engine(this.canvas, true, { preserveDrawingBuffer: true, stencil: false });
         const scene = new Scene(this.engine);
+        scene.clearColor = new Color4(1, 1, 1);
 
         const camera = new ArcRotateCamera('Camera', Math.PI / 2, Math.PI / 2.3, 200, new Vector3(-5, -2, -18), scene);
         // const camera = new BABYLON.ArcRotateCamera('Camera', -Math.PI / 4, Math.PI / 2.5, 200, new BABYLON.Vector3(-3, 2, 0), scene);
@@ -227,10 +228,15 @@ export class IntroComponent implements OnInit {
         });
 
         helper.setMainColor(new Color3(0.47, 0.11, 0.68));
-        // helper.setMainColor(new BABYLON.Color3(0.38823529411764707, 0.09019607843137255, 0.5686274509803921));
+        // helper.setMainColor(new Color3(0.2, 0.065, 0.257));
+        //         0,2
+        // 0,065
+        // 0,257
+        // helper.setMainColor(new Color3(0.38823529411764707, 0.09019607843137255, 0.5686274509803921));
 
-        const skybox = scene.getMaterialByID('BackgroundSkyboxMaterial');
-        // skybox.primaryColorShadowLevel = 1;
+        // scene.getMaterialByID('BackgroundSkyboxMaterial').primaryColorShadowLevel = 1;
+        const skybox = scene.getMaterialByID('BackgroundSkyboxMaterial') as any;
+        skybox.primaryColorShadowLevel = 1;
 
         // POINTER EVENTS
         scene.onPointerObservable.add((pointerInfo) => {

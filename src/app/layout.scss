@@ -4,6 +4,17 @@
   color: #823a9c;
 }
 
+.white-block a {
+    color: #823a9c;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s all ease;
+}
+
+.white-block a:hover {
+    text-decoration: underline;
+}
+
 .colour-block {
   background: linear-gradient(0deg, #63267d, #823a9c);
   padding: 100px 20%;
@@ -22,14 +33,15 @@ h5 {
   text-align: center;
   font-size: 40px;
   font-family: "wire one", serif;
-  font-weight: normal;
-  margin-top: 0;
+  font-weight: 600;
+  margin: 2rem 0;
 }
 
 p {
   font-size: 20px;
   font-family: "Raleway", serif;
 }
+
 
 .separator {
   overflow: hidden;
@@ -52,13 +64,22 @@ p {
 
 .top {
     height: 450px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#63267d), to(#823a9c));
-    background: linear-gradient(180deg, #63267d, #823a9c);
-    font-size: 60px;
+    // background: -webkit-gradient(linear, left top, left bottom, from(#63267d), to(#823a9c));
+    // background: linear-gradient(180deg, #63267d, #823a9c);
+    // background-image: radial-gradient(ellipse farthest-corner at center bottom, #84479E 0%, #25132E 100%);
+    background-image: radial-gradient(ellipse farthest-corner at center bottom, #A458C4 0%, #25132E 100%);
+    font-size: 70px;
     color: white;
     text-align: center;
     padding-top: 170px;
-    font-family: "Raleway", serif;
+    // font-family: "Raleway", serif;
+    font-family: 'Russo One', sans-serif;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
 }
 
 button {
