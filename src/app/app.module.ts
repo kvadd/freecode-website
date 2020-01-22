@@ -10,10 +10,12 @@ import { UppdragComponent } from './uppdrag/uppdrag.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { KonsulterComponent } from './konsulter/konsulter.component';
 import { FrikodareComponent } from './frikodare/frikodare.component';
+import { SeparatorComponent } from './separator/separator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SeparatorComponent,
     IntroComponent,
     UppdragComponent,
     KonsulterComponent,

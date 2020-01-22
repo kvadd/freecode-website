@@ -18,6 +18,7 @@ export class IntroComponent implements OnInit {
 
     private canvas;
     private engine;
+    private camera;
 
     public ngOnInit(): void {
         this.setup();
@@ -29,16 +30,16 @@ export class IntroComponent implements OnInit {
         const scene = new Scene(this.engine);
         scene.clearColor = new Color4(1, 1, 1);
 
-        const camera = new ArcRotateCamera('Camera', Math.PI / 2, Math.PI / 2.3, 200, new Vector3(-5, -2, -18), scene);
-        // const camera = new BABYLON.ArcRotateCamera('Camera', -Math.PI / 4, Math.PI / 2.5, 200, new BABYLON.Vector3(-3, 2, 0), scene);
+        this.camera = new ArcRotateCamera('Camera', Math.PI / 2, Math.PI / 2.3, 200, new Vector3(-5, -2, -18), scene);
+        // this.camera = new ArcRotateCamera('Camera', -Math.PI / 4, Math.PI / 2.5, 200, new Vector3(-3, 2, 0), scene);
 
         // Camera constraints
-        camera.upperBetaLimit = Math.PI / 2;
-        camera.lowerRadiusLimit = 16;
-        camera.upperRadiusLimit = 40;
-        // camera.fovMode = Camera.FOVMODE_HORIZONTAL_FIXED;
-        // camera.useAutoRotationBehavior = true;
-        // camera.attachControl(canvas, true);
+        this.camera.upperBetaLimit = Math.PI / 2;
+        this.camera.lowerRadiusLimit = 16;
+        this.camera.upperRadiusLimit = 40;
+        // this.camera.fovMode = Camera.FOVMODE_HORIZONTAL_FIXED;
+        // this.camera.useAutoRotationBehavior = true;
+        // this.camera.attachControl(canvas, true);
         // scene.debugLayer.show({ embedMode: true });
 
         // Environment Texture
@@ -229,9 +230,6 @@ export class IntroComponent implements OnInit {
 
         helper.setMainColor(new Color3(0.47, 0.11, 0.68));
         // helper.setMainColor(new Color3(0.2, 0.065, 0.257));
-        //         0,2
-        // 0,065
-        // 0,257
         // helper.setMainColor(new Color3(0.38823529411764707, 0.09019607843137255, 0.5686274509803921));
 
         // scene.getMaterialByID('BackgroundSkyboxMaterial').primaryColorShadowLevel = 1;
@@ -242,7 +240,6 @@ export class IntroComponent implements OnInit {
         scene.onPointerObservable.add((pointerInfo) => {
 
             if (pointerInfo.type === PointerEventTypes.POINTERDOWN) {
-                // console.log('clicked!', pointerInfo);
                 const mesh = scene.getMeshByName(pointerInfo.pickInfo.pickedMesh.name);
 
                 if (mesh && mesh.physicsImpostor && mesh.physicsImpostor.applyImpulse) {
@@ -260,6 +257,7 @@ export class IntroComponent implements OnInit {
             }
         });
 
+        this.updateCameraFocus();
 
         scene.registerBeforeRender(() => {
             freeCodeLogo.rotate(new Vector3(0, 90, 0), Math.PI / 600, Space.WORLD);
@@ -273,7 +271,21 @@ export class IntroComponent implements OnInit {
 
         // Resize
         window.addEventListener('resize', () => {
+            this.updateCameraFocus();
             this.engine.resize();
         });
+    }
+
+    private updateCameraFocus() {
+        if (this.camera) {
+            if (window.innerWidth <= 640) {
+                this.camera.target.z = -5;
+                this.camera.target.y = 2;
+            }
+            else {
+                this.camera.target.z = -18;
+                this.camera.target.y = -2;
+            }
+        }
     }
 }

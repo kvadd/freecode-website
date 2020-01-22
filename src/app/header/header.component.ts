@@ -23,6 +23,7 @@ import { trigger, transition, animate, style, state } from '@angular/animations'
 export class HeaderComponent {
 
     public showMenu: boolean = false;
+    public showHeaderBackground: boolean = false;
 
     public toggleMenu(event: Event): void {
         event.stopPropagation();
@@ -31,7 +32,12 @@ export class HeaderComponent {
     }
 
     @HostListener('document:click', ['$event'])
-    public clickedOutside(event: Event) {
+    public clickedOutside() {
         this.showMenu = false;
+    }
+
+    @HostListener('document:scroll', ['$event'])
+    public scrollFunction(event: any) {
+        this.showHeaderBackground = !!(event.target.documentElement.scrollTop > 300);
     }
 }
