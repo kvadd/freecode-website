@@ -31,13 +31,13 @@ export class HeaderComponent {
         this.showMenu = !this.showMenu;
     }
 
-    @HostListener('document:click', ['$event'])
+    @HostListener('document:click')
     public clickedOutside() {
         this.showMenu = false;
     }
 
     @HostListener('document:scroll', ['$event'])
     public scrollFunction(event: any) {
-        this.showHeaderBackground = !!(event.target.documentElement.scrollTop > 300);
+        this.showHeaderBackground = !!(event.target.documentElement.scrollTop > 400);
     }
 }
