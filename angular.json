@@ -22,7 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -32,9 +32,9 @@
               "./node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": [
-                "./node_modules/jquery/dist/jquery.min.js",
-                "./node_modules/ammo.js/builds/ammo.js",
-                "./node_modules/jquery.pep.js/src/jquery.pep.js"
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/ammo.js/builds/ammo.js",
+              "./node_modules/jquery.pep.js/src/jquery.pep.js"
             ]
           },
           "configurations": {
@@ -50,7 +50,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -129,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "website"
+    }
+  },
+  "defaultProject": "website",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,6 +1,6 @@
 
 .header {
-    overflow: hidden;
+    //overflow: hidden;
     background-color: rgba(116, 60, 140, 0.9);
     padding: 15px 20px;
     position: fixed;
@@ -22,9 +22,8 @@
     color: #ffffff;
     text-align: left;
     margin: 0.5rem;
-    padding: 0.5rem;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 25px;
     transition: 0.1s all linear;
@@ -40,7 +39,7 @@
 .header .menu-item:hover {
     // background-color: #ddd;
     // color: #3498db;
-    border-bottom: 3px solid #cd87ea;;
+    border-bottom: 2px solid #cd87ea;
 }
 
 .header .menu-item:focus {
@@ -50,7 +49,7 @@
 .header .menu-item.active {
     // background-color: #3498db;
     color: #ffffff;
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
 }
 
 .menu-button {
@@ -105,9 +104,9 @@
     position: fixed;
     top: 75px;
     right: 1%;
-    border-radius: 6px;
-    padding: 2rem;
-    background: linear-gradient(0deg, rgba(99, 38, 125, 0.9), rgba(121, 53, 146, 0.9));
+    border-radius: 4px;
+    padding: 0.5rem 4rem 0.5rem 2rem;
+    background: linear-gradient(0deg, rgba(99, 38, 125, 0.7), rgba(121, 53, 146, 0.9));
     box-shadow: 0px 0px 20px 0px #63267d;
 
     & div > a {
