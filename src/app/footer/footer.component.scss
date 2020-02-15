@@ -31,7 +31,12 @@ p {
     margin-bottom: -6px;
 }
 
-.logo {
+.logo:focus{
+    outline: none;
+}
+
+.logo > source,
+.logo > img{
     margin: 0 auto;
     height: 24px;
     margin-bottom: 1rem;

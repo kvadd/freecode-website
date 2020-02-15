@@ -11,6 +11,10 @@
     transition: 0.2s all ease;
 }
 
+.logo:focus{
+    outline: none;
+}
+
 .headerTop {
     background-color: rgba(116, 60, 140, 0);
     box-shadow: none;
